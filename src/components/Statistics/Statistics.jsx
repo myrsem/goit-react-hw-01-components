@@ -1,16 +1,19 @@
-import { StatsContainer,
-    Title,
-    List,
-    Item,
-    Label,
-    Percentage } from './Statistics.styled'
+import {
+  StatsContainer,
+  Title,
+  List,
+  Item,
+  Label,
+  Percentage,
+} from './Statistics.styled';
+import PropTypes from 'prop-types';
 
 function randomColor() {
-    let color = `#${(Math.random().toString(16) + '000000')
-      .substring(2, 8)
-      .toUpperCase()}80`;
-    return color;
-  }
+  let color = `#${(Math.random().toString(16) + '000000')
+    .substring(2, 8)
+    .toUpperCase()}80`;
+  return color;
+}
 
 export const Statistics = ({ stats }) => {
   return (
@@ -26,4 +29,14 @@ export const Statistics = ({ stats }) => {
       </List>
     </StatsContainer>
   );
+};
+
+Statistics.propTypes = {
+  stats: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ),
 };
