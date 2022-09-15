@@ -1,4 +1,4 @@
-import { ProfileContainer, Description, Stats, Avatar, Username, Tag, Location, StatsList, StatsTitle, StatsNumber } from './Profile.styled'
+import { ProfileContainer, Description, Stats, Avatar, Username, Tag, Location, StatsItem, StatsTitle, StatsNumber } from './Profile.styled'
 import PropTypes from 'prop-types';
 
 export const Profile = ({ user }) => {
@@ -12,18 +12,18 @@ export const Profile = ({ user }) => {
       <Location>{user.location}</Location>
       </Description>
       <Stats>
-    <StatsList>
+    <StatsItem>
       <StatsTitle >Followers</StatsTitle>
       <StatsNumber >{ user.stats.followers }</StatsNumber>
-    </StatsList>
-    <StatsList>
+    </StatsItem>
+    <StatsItem>
       <StatsTitle >Views</StatsTitle>
       <StatsNumber >{ user.stats.likes }</StatsNumber>
-    </StatsList>
-    <StatsList>
+    </StatsItem>
+    <StatsItem>
       <StatsTitle >Likes</StatsTitle>
       <StatsNumber >{ user.stats.views }</StatsNumber>
-    </StatsList>
+    </StatsItem>
       </Stats>
       </ProfileContainer>
     );

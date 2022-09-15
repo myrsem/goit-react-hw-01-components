@@ -24,6 +24,7 @@ export const Username = styled.p`
 font-size: 24px;
 font-weight: 700;
 margin-bottom: 12px;
+color: #010101;
 `;
 
 export const Tag = styled.p`
@@ -43,7 +44,7 @@ display: flex;
 text-align: center;
 `;
 
-export const StatsList = styled.li`
+export const StatsItem = styled.li`
 display: flex;
 align-items: center;
 flex-direction: column;
@@ -65,4 +66,5 @@ margin-bottom: 10px;
 export const StatsNumber = styled.span`
 font-size: 18px;
 font-weight: 700;
+color: #010101;
 `

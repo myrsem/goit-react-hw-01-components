@@ -1,12 +1,12 @@
 import user from 'components/Profile/user.json';
+import data from 'components/Statistics/data.json';
 import { Profile } from 'components/Profile/Profile';
-// import { Statistics } from 'components/Statistics/Statistics';
+import { Statistics } from 'components/Statistics/Statistics';
 // import { FriendList } from 'components/FriendList/FriendList';
 // import { TransactionHistory } from 'components/TransactionHistory/TransactionHistory';
 
 export const App = () => {
   return (
-    <>
       <div
         style={{
           textAlign: 'center',
@@ -16,8 +16,8 @@ export const App = () => {
         <h1 style={{
           fontSize: 30,
           color: '#010101',
+          marginBottom: 30,
         }}>React homework template</h1>
-      </div>
       <div
         style={{
           display: 'flex',
@@ -27,12 +27,8 @@ export const App = () => {
         }}
       >
       <Profile user={user} />
-      {/* <Statistics />
-      <FriendList />
-      <TransactionHistory /> */}
+      <Statistics stats={data}/>
       </div>
-    </>
+      </div>
   );
 };
-
-console.log(user)
