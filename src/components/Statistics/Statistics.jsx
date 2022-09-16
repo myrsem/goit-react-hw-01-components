@@ -15,10 +15,10 @@ function randomColor() {
   return color;
 }
 
-export const Statistics = ({ stats }) => {
+export const Statistics = ({ title, stats }) => {
   return (
     <StatsContainer>
-      <Title>Upload stats</Title>
+      {title && <Title>{title}</Title>}
       <List>
         {stats.map(({ id, label, percentage }) => (
           <Item backgroundColor={randomColor()} key={id}>
@@ -32,6 +32,7 @@ export const Statistics = ({ stats }) => {
 };
 
 Statistics.propTypes = {
+  title: PropTypes.string,
   stats: PropTypes.arrayOf(
     PropTypes.exact({
       id: PropTypes.string.isRequired,
